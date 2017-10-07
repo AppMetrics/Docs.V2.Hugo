@@ -12,6 +12,6 @@ In the repo's root run `hugo serve`
 
 ## Hosting
 
-Static site is hosting on [Netlify](https://www.netlify.com/).
+Static site is hosted on [Netlify](https://www.netlify.com/).
 
 
