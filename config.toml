@@ -4,7 +4,7 @@ title = "App Metrics"
 theme = "hugo-theme-learn"
 
 [params]
-editURL = "https://github.com/AppMetrics/Docs.V2.Hugo"
+editURL = "https://github.com/AppMetrics/Docs.V2.Hugo/edit/master/content/"
 description = "Documentation for App Metrics"
 author = "Allan Hardy"
 showVisitedLinks = true
