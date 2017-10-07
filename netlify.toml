@@ -1,0 +1,21 @@
+# Global settings applied to the whole site.  
+# “base” is directory to change to before starting build, and
+# “public” is the directory to publish (relative to root of your repo).
+# “command” is your build command.
+
+[build]
+  base    = "site"
+  publish = "public"
+  command = "hugo_0.29"
+
+# Production context: All deploys to the main
+# repository branch will inherit these settings.
+[context.production]
+  command = "make production"
+  [context.production.environment]
+    HUGO_VERSION = "0.29"    
+
+# Deploy Preview context: All Deploy Previews
+# will inherit these settings.
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.29"
