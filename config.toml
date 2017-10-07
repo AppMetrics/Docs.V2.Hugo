@@ -1,0 +1,25 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "App Metrics"
+theme = "hugo-theme-learn"
+
+[params]
+editURL = "https://github.com/AppMetrics/Docs.V2.Hugo"
+description = "Documentation for App Metrics"
+author = "Allan Hardy"
+showVisitedLinks = true
+themeVariant = "appmetrics"
+disableShortcutsTitle = false
+ordersectionsby = "weight"
+disableSearch = false
+disableAssetsBusting = false
+googleAnalytics = "UA-98322721-1"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[Languages.en.menu.shortcuts]] 
+name = "<i class='fa fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/AppMetrics/AppMetrics"
+weight = 10
