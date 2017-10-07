@@ -1,20 +1,18 @@
-# Global settings applied to the whole site.  
-# “base” is directory to change to before starting build, and
-# “public” is the directory to publish (relative to root of your repo).
-# “command” is your build command.
-
 [build]
-  base    = "site"
   publish = "public"
   command = "hugo"
 
-# Production context: All deploys to the main
-# repository branch will inherit these settings.
-[context.production]  
-  [context.production.environment]
-    HUGO_VERSION = "0.29"    
+[context.production.environment]
+  HUGO_VERSION = "0.29"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
 
-# Deploy Preview context: All Deploy Previews
-# will inherit these settings.
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.29"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.29"
+
+[context.next.environment]
+  HUGO_BASEURL = "https://next--app-metrics.netlify.com/"
+  HUGO_ENABLEGITINFO = "true"
