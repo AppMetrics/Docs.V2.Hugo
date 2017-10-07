@@ -6,7 +6,7 @@
 [build]
   base    = "site"
   publish = "public"
-  command = "hugo_0.29"
+  command = "hugo"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
