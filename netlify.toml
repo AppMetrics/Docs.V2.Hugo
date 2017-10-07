@@ -10,8 +10,7 @@
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
-[context.production]
-  command = "make production"
+[context.production]  
   [context.production.environment]
     HUGO_VERSION = "0.29"    
 
