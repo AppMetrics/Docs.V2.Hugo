@@ -17,7 +17,9 @@ nuget install App.Metrics
 ```
 
 ```csharp
-var metrics = new MetricsBuilder().Build();
+var metrics = new MetricsBuilder()
+    ... // configure options
+.Build();
 ```
 
 ### Recording Metrics

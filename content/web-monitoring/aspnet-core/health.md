@@ -19,7 +19,7 @@ App Metrics provides a set of support packages to integrate [App Metrics Health]
 
 ### Getting started
 
-The quickest way to get started with health checks in an ASP.NET Core application is to use the `UseHealth` extension method on `Microsoft.AspNetCore.Hosting.IWebHostBuilder`. This will automatically scan the executing assembly, as well as any of it's referenced assemblies with a dependency on `App.Metrics.Health.*`, for health check implementations and register them.
+The quickest way to get started with health checks in an ASP.NET Core application is to use the `UseHealth` extension method on `Microsoft.AspNetCore.Hosting.IWebHostBuilder`. This will automatically scan the executing assembly, as well as any of it's referenced assemblies with a dependency on `App.Metrics.*`, for health check implementations and register them.
 
 <i class="fa fa-hand-o-right"></i> Create a [new ASP.NET Core MVC project](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc).
 
