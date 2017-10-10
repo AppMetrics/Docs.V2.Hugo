@@ -1,6 +1,5 @@
 ---
 title: "Elasticsearch"
-date: 2017-09-28T22:34:02+10:00
 draft: false
 weight: 3
 icon: "/images/elasticsearch.png"

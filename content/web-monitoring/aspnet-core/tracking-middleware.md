@@ -1,6 +1,5 @@
 ---
 title: "Web Metrics"
-date: 2017-09-28T22:49:49+10:00
 draft: false
 weight: 2
 icon: "/images/webmetrics.png"

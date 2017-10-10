@@ -1,6 +1,5 @@
 ---
 title: "Reservoir Sampling"
-date: 2017-09-28T22:22:04+10:00
 draft: false
 chapter: false
 weight: 5

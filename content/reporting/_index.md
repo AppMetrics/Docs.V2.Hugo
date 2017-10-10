@@ -1,7 +1,6 @@
 ---
 title: "Reporting"
 date: 2017-09-28T22:30:39+10:00
-draft: false
 chapter: false
 pre: "<b>4. </b>"
 weight: 4
@@ -16,7 +15,7 @@ You can find App Metrics specific Grafana Dashboards on [Grafana Labs](https://g
 
 For App Metrics reporting topics, review the following documentation:
 
-{{% children description="true" %}}
+{{% children style="h4" description="true" %}}
 
 {{% notice info %}}
 Don't see the reporter your looking for? [Open a new github issue](https://github.com/AppMetrics/AppMetrics/issues/new) to discuss adding support.

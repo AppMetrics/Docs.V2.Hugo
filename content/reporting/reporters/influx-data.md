@@ -1,6 +1,5 @@
 ---
 title: "Influx Data"
-date: 2017-09-28T22:33:52+10:00
 draft: false
 weight: 1
 icon: "/images/influx_logo.png"

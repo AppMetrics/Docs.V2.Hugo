@@ -1,6 +1,5 @@
 ---
 title: "Endpoints"
-date: 2017-09-28T22:49:49+10:00
 draft: false
 weight: 3
 icon: "/images/webmetrics.png"

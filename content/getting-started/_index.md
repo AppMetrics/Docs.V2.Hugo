@@ -1,6 +1,5 @@
 ---
 title: "Getting Started"
-date: 2017-09-27T21:12:38+10:00
 draft: false
 chapter: false
 pre: "<b>1. </b>"
@@ -10,7 +9,7 @@ icon: "/images/logo.png"
 
 ## Basics
 
-App Metrics uses a simple C# fluent builder API to configure metrics. Core functionality is provided through an `IMetrics` interface. To build the interface use the `MetricsBuilder`. App Metrics core functionality is provided in the `App.Metrics` nuget package.
+App Metrics uses a simple C# fluent builder API to configure metrics. Core functionality is provided through an `IMetrics` interface. To build the interface use the `MetricsBuilder`. App Metrics core functionality is provided in the [App.Metrics](https://www.nuget.org/packages/App.Metrics/) nuget package.
 
 ```console
 nuget install App.Metrics

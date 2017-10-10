@@ -1,6 +1,5 @@
 ---
 title: "Gauges"
-date: 2017-09-28T23:47:20+10:00
 draft: false
 weight: 1
 icon: "/images/gauge.png"

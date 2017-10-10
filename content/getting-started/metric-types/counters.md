@@ -1,6 +1,5 @@
 ---
 title: "Counters"
-date: 2017-09-28T23:47:05+10:00
 draft: false
 weight: 2
 icon: "/images/counter.png"

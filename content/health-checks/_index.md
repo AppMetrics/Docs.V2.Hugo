@@ -1,6 +1,5 @@
 ---
 title: "Health Checks"
-date: 2017-09-28T22:21:34+10:00
 draft: false
 chapter: false
 weight: 2

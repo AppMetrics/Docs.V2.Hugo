@@ -1,6 +1,5 @@
 ---
 title: "Formatting Metrics"
-date: 2017-09-28T22:21:52+10:00
 draft: false
 chapter: false
 weight: 3

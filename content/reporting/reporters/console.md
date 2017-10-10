@@ -1,6 +1,5 @@
 ---
 title: "Console"
-date: 2017-09-28T22:34:27+10:00
 draft: false
 weight: 6
 icon: "/images/cmd.png"

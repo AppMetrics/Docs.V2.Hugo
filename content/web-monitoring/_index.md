@@ -1,6 +1,5 @@
 ---
 title: "Web Applications"
-date: 2017-09-28T22:30:58+10:00
 draft: false
 chapter: false
 pre: "<b>3. </b>"
@@ -20,4 +19,4 @@ Out-of-box App Metrics does not provide a visualization tool, instead it include
 
 The following documentation sections assist in getting started with App Metrics in a web application:
 
-{{% children description="true" %}}
+{{% children style="h4" description="true" %}}

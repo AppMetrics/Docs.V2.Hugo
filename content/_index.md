@@ -1,6 +1,5 @@
 ---
 title: "Home"
-date: 2017-09-27T21:12:38+10:00
 draft: false
 chapter: false
 ---

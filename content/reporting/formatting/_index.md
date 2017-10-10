@@ -1,6 +1,5 @@
 ---
 title: "Formatting"
-date: 2017-09-28T22:35:07+10:00
 draft: false
 ---
 

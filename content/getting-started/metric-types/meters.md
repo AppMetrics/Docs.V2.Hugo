@@ -1,6 +1,5 @@
 ---
 title: "Meters"
-date: 2017-09-28T23:47:16+10:00
 draft: false
 weight: 3
 icon: "/images/meter.png"

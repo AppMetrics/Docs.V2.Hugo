@@ -1,6 +1,5 @@
 ---
 title: "Tagging & Organizing"
-date: 2017-09-27T21:17:43+10:00
 draft: false
 weight: 3
 icon: "/images/tag.png"

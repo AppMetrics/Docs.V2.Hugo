@@ -1,6 +1,5 @@
 ---
 title: "Metric Types"
-date: 2017-09-28T22:19:00+10:00
 draft: false
 chapter: false
 weight: 2

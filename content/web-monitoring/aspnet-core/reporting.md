@@ -1,6 +1,5 @@
 ---
 title: "Reporting"
-date: 2017-09-28T22:30:39+10:00
 draft: false
 chapter: false
 weight: 5

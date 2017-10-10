@@ -1,6 +1,5 @@
 ---
 title: "Prometheus"
-date: 2017-09-28T22:34:08+10:00
 draft: false
 weight: 2
 icon: "/images/prometheus.png"

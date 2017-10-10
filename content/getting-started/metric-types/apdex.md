@@ -1,6 +1,5 @@
 ---
 title: "Apdex"
-date: 2017-09-28T23:46:47+10:00
 draft: false
 weight: 6
 icon: "/images/apdex.png"

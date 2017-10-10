@@ -1,6 +1,5 @@
 ---
 title: "Http"
-date: 2017-09-28T22:34:22+10:00
 draft: false
 weight: 5
 icon: "/images/http.png"

@@ -1,6 +1,5 @@
 ---
 title: "Histograms"
-date: 2017-09-28T23:47:10+10:00
 draft: false
 weight: 4
 icon: "/images/histogram.png"

@@ -1,6 +1,5 @@
 ---
 title: "Grafana"
-date: 2017-09-28T22:49:58+10:00
 draft: false
 icon: "/images/grafana.png"
 weight: 7

@@ -1,6 +1,5 @@
 ---
 title: "Configuration"
-date: 2017-09-28T22:50:31+10:00
 draft: false
 weight: 6
 icon: "/images/configuration.png"

@@ -1,6 +1,5 @@
 ---
 title: "Text File"
-date: 2017-09-28T22:34:33+10:00
 draft: false
 weight: 7
 icon: "/images/txt.png"
