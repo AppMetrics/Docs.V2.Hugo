@@ -3,6 +3,7 @@ title: "Grafana"
 date: 2017-09-28T22:35:43+10:00
 draft: false
 icon: "/images/grafana.png"
+weight: 3
 ---
 
 App Metrics does not include any visualzation tool but does include [Grafana](http://grafana.org/) dashboards for web applications which will get you started with the default metrics recorded by [App Metrics ASP.NET Core Tracking]({{< ref "web-monitoring/aspnet-core/tracking-middleware.md" >}}). There are also [Sample Applications](https://github.com/AppMetrics/Samples), each with a ready-to-go [Grafana dashboards](https://github.com/AppMetrics/Samples/tree/master/grafana_dashboards) to help you get started.
