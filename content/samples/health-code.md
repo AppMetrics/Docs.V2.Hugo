@@ -22,6 +22,14 @@ You can find code samples referenced below for App Metrics features on [GitHub](
 Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetCore2.Health.Api.QuickStart)
 {{% /notice %}}
 
+#### Net452.Health.Console.sln
+
+<i class="fa fa-hand-o-right"></i> `Net452.Health.Console.QuickStart.csproj`: A NET452 console application with App Metrics Health 2.0 basics configured.
+
+{{% notice info %}}
+Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/Net452.Health.Console.QuickStart)
+{{% /notice %}}
+
 ___
 
 {{% notice note %}}

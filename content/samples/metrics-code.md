@@ -28,6 +28,14 @@ Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetC
 Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetCore2.Api.Reservoirs)
 {{% /notice %}}
 
+#### Net452.Metrics.Console.sln
+
+<i class="fa fa-hand-o-right"></i> `Net452.Metrics.Console.QuickStart.csproj`: A NET452 console application with App Metrics 2.0 basics configured.
+
+{{% notice info %}}
+Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/Net452.Metrics.Console.QuickStart)
+{{% /notice %}}
+
 ___
 
 {{% notice note %}}
