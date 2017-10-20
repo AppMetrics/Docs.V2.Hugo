@@ -128,7 +128,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         var metrics = AppMetricsHealth.CreateDefaultBuilder()
-            .HealthChecks.RegisterFromAssembly(services, Assembly.GetEntryAssembly().GetName().Name)
+            .HealthChecks.RegisterFromAssembly(services)
             ... // configure options and add health checks
             .Build();
 
