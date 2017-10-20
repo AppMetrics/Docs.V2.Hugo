@@ -22,12 +22,18 @@ You can find code samples referenced below for App Metrics features on [GitHub](
 Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetCore2.Health.Api.QuickStart)
 {{% /notice %}}
 
-#### Net452.Health.Console.sln
+#### NetFullFramework.Health.Console
 
 <i class="fa fa-hand-o-right"></i> `Net452.Health.Console.QuickStart.csproj`: A NET452 console application with App Metrics Health 2.0 basics configured.
 
 {{% notice info %}}
 Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/Net452.Health.Console.QuickStart)
+{{% /notice %}}
+
+<i class="fa fa-hand-o-right"></i> `Net461.Health.MicrosoftDI.Console.QuickStart`: A NET461 console application with App Metrics Health 2.0 basics configured using `Microsoft.Extensions.DependencyInjection`.
+
+{{% notice info %}}
+Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/Net461.Health.MicrosoftDI.Console.QuickStart)
 {{% /notice %}}
 
 ___
