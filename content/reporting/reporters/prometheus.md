@@ -56,22 +56,24 @@ nuget install App.Metrics.AspNetCore
 ```csharp
 public static class Program
 {
+    public static IMetricsRoot Metrics { get; set; }
+
     public static IWebHost BuildWebHost(string[] args)
     {
+        Metrics = AppMetrics.CreateDefaultBuilder()
+                .OutputMetrics.AsPrometheusPlainText()
+                .OutputMetrics.AsPrometheusProtobuf()
+                .Build();
+
         return WebHost.CreateDefaultBuilder(args)
-                        .ConfigureMetricsWithDefaults(
-                            builder =>
-                            {
-                                builder.OutputMetrics.AsPrometheusPlainText();
-                                builder.OutputMetrics.AsPrometheusProtobuf();
-                            })
+                        .ConfigureMetrics(Metrics)
                         .UseMetrics(
                             options =>
                             {
                                 options.EndpointOptions = endpointsOptions =>
                                 {
-                                    endpointsOptions.MetricsTextEndpointOutputFormatter = new MetricsPrometheusTextOutputFormatter();
-                                    endpointsOptions.MetricsEndpointOutputFormatter = new MetricsPrometheusProtobufOutputFormatter();
+                                    endpointsOptions.MetricsTextEndpointOutputFormatter = Metrics.OutputMetricsFormatters.GetType<MetricsPrometheusTextOutputFormatter>();
+                                    endpointsOptions.MetricsEndpointOutputFormatter = Metrics.OutputMetricsFormatters.GetType<MetricsPrometheusProtobufOutputFormatter>();
                                 };
                             })
                         .UseStartup<Startup>()
