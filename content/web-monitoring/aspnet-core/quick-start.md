@@ -55,8 +55,7 @@ public static class Program
   },
   "MetricEndpointsOptions": {
     "MetricsEndpointEnabled": true,
-    "MetricsTextEndpointEnabled": true,
-    "PingEndpointEnabled": true,
+    "MetricsTextEndpointEnabled": true,    
     "EnvironmentInfoEndpointEnabled": true
   }
 }
