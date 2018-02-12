@@ -130,7 +130,7 @@ public class Startup
         var metrics = AppMetricsHealth.CreateDefaultBuilder()
             .HealthChecks.RegisterFromAssembly(services)
             ... // configure options and add health checks
-            .Build();
+            .BuildAndAddTo(services);
 
         services.AddMetrics(metrics);
         services.AddHealthEndpoints();
