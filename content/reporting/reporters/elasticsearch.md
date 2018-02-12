@@ -42,7 +42,7 @@ Configuration options are provided as a setup action used with `ToElasticsearch(
 ```csharp
 var filter = new MetricsFilter().WhereType(MetricType.Timer);
 var metrics = new MetricsBuilder()
-    .Report.OverHttp(
+    .Report.ToElasticsearch(
         options => {
             options.Elasticsearch.Index = "metricsindex";
             options.Elasticsearch.BaseUri = new Uri("http://127.0.0.1:9200");

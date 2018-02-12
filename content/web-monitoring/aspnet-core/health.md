@@ -132,7 +132,7 @@ public class Startup
             ... // configure options and add health checks
             .BuildAndAddTo(services);
 
-        services.AddMetrics(metrics);
+        services.AddHealth(metrics);
         services.AddHealthEndpoints();
     }
 }
