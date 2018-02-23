@@ -12,6 +12,9 @@ App Metrics includes various pre-defined health checks which can be registered u
 
 ```console
 nuget install App.Metrics.Health
+nuget install App.Metrics.Health.Checks.Http
+nuget install App.Metrics.Health.Checks.Network
+nuget install App.Metrics.Health.Checks.Process
 ```
 
 ```csharp
