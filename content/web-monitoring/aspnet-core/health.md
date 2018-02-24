@@ -230,6 +230,13 @@ As well as automatically registering any `HealthCheck` implementation, in-line a
 
 ### How to use
 
+You need to add following Nuget packages for additional health-checks:
+```console
+nuget install App.Metrics.Health.Checks.Http
+nuget install App.Metrics.Health.Checks.Network
+nuget install App.Metrics.Health.Checks.Process
+```
+
 ```csharp
 ...
 
