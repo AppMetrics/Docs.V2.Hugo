@@ -206,23 +206,40 @@ The `App.Metrics.AspNetCore.Health.Endpoints` nuget package includes endpoint ho
 External monitoring tools can be used to request the `/health` endpoint at a configured interval to continously monitor and alert the health of an API.
 {{% /notice %}}
 
-<i class="fa fa-hand-o-right"></i> To modify these configuration options, use the `ConfigureAppHealthHostingConfiguration()` extension method on the `IWebHostBuilder`:
+<i class="fa fa-hand-o-right"></i> To modify these configuration options, use the `ConfigureAppHealthHostingConfiguration()` extension method on the `IWebHostBuilder` in case if you are using bootstrapping with WebHost:
 
 ```csharp
 ...
-
-.ConfigureAppHealthHostingConfiguration(options =>
-{
-    options.AllEndpointsPort = 1111;
-    options.HealthEndpoint = "app-metrics-health";
-});
-
+var webHostBuilder = WebHost.CreateDefaultBuilder(args)
+    .UseStartup<Startup>()
+    .ConfigureAppHealthHostingConfiguration(options =>
+    {
+        options.AllEndpointsPort = 1111;
+        options.HealthEndpoint = "app-metrics-health";
+    });
+    
 ...
-```
+```  
 
+<i class="fa fa-hand-o-right"></i>Or you can use IConfigureOptions if bootstrapping with Startup:
+```csharp
+...
+ public void ConfigureServices(IServiceCollection services)
+ {
+    ...
+    services.TryAddEnumerable(ServiceDescriptor.Singleton<IConfigureOptions<HealthEndpointsHostingOptions>, ConfigureHealthHostingOptions>());
+    ...
+ }
+ 
+public class ConfigureHealthHostingOptions : IConfigureOptions<HealthEndpointsHostingOptions>
+{
+    public void Configure(HealthEndpointsHostingOptions options) { options.HealthEndpoint = "/custom_health_check_url"; }
+}    
+...
+```  
 {{% notice note %}}
 When a custom port is defined on any or all of the endpoints, App Metrics Health will append the additional urls with the defined ports to the [Microsoft.AspNetCore.Hosting.WebHostDefaults.ServerUrlsKey](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.hosting.webhostdefaults.serverurlskey?view=aspnetcore-2.0)'s value.
-{{% /notice %}}
+{{% /notice %}}  
 
 ## Adding in-line and pre-defined checks
 
