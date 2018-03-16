@@ -1,5 +1,5 @@
 ---
-title: "Influx Data"
+title: "GrafanaCloud Hosted Metrics"
 draft: false
 weight: 1
 icon: "/images/grafana.png"
