@@ -48,7 +48,7 @@ Configuration options are provided as a setup action used with `ToHostedMetrics(
 ```csharp
 var filter = new MetricsFilter().WhereType(MetricType.Timer);
 var metrics = new MetricsBuilder()
-    .Report.ToInfluxDb(
+    .Report.ToHostedMetrics(
         options => {
             options.HostedMetrics.BaseUri = "base url of your hosted metrics";
             options.HostedMetrics.ApiKey = "your hosted metrics api key";
