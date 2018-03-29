@@ -28,5 +28,7 @@ var healthBuilder = new HealthBuilder()
     // Check connectivity to google with a "ping", passes if the result is `IPStatus.Success`
     .HealthChecks.AddPingCheck("google ping", "google.com", TimeSpan.FromSeconds(10))
     // Check connectivity to github by ensuring the GET request results in `IsSuccessStatusCode`
-    .HealthChecks.AddHttpGetCheck("github", new Uri("https://github.com/"), TimeSpan.FromSeconds(10));
+    .HealthChecks.AddHttpGetCheck("github", new Uri("https://github.com/"), TimeSpan.FromSeconds(10))
+    // Check connectivity to github by ensuring the GET request results in `IsSuccessStatusCode`, this time performing 3 retries with a 100ms delay between failed requests
+    .HealthChecks.AddHttpGetCheck("github", new Uri("https://github.com/"), retries: 3, delayBetweenRetries: TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(10));
 ```
