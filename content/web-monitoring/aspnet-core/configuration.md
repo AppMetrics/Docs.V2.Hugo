@@ -92,7 +92,7 @@ public class Startup
 
         services.AddMetrics(metrics);
 
-        services.AddMvc(options => options.AddMetricsResourceFilter());
+        services.AddMvc().AddMetrics();
     }
 }
 ```
@@ -117,7 +117,7 @@ public class Startup
 
         services.AddMetrics(metrics);
 
-        services.AddMvc(options => options.AddMetricsResourceFilter());
+        services.AddMvc().AddMetrics();
     }
 }
 ```

@@ -85,7 +85,7 @@ public class Startup
         services.AddMetrics(metrics);
         services.AddMetricsReportScheduler();
 
-        services.AddMvc();
+        services.AddMvc().AddMetrics();
     }
 }
 ```
