@@ -33,7 +33,7 @@ namespace ApiSample
         {
             services.AddTransient<IDatabase, Database>();
 
-            services.AddMvc(options => options.AddMetricsResourceFilter());
+            services.AddMvc().AddMetrics();
 
             services
                 .AddMetrics(Configuration.GetSection("AppMetrics"))
