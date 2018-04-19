@@ -97,4 +97,4 @@ See the [ASP.NET Core documentation]({{< ref "web-monitoring/aspnet-core/_index.
 The [App.Metrics.AspNetCore.Tracking](https://www.nuget.org/packages/App.Metrics.AspNetCore.Tracking/) nuget package automatically records typical web metrics when added to an ASP.NET Core application. App Metrics includes pre-built Grafana dashboards to visualize these metrics:
 
 1. Configure the Prometheus [scrape config](https://github.com/prometheus/docs/blob/master/content/docs/operating/configuration.md#scrape_config)
-1. Install the App Metrics [Grafana dashboard](https://grafana.com/dashboards/2140).
+1. Install the App Metrics [Grafana dashboard](https://grafana.com/dashboards/2204).
