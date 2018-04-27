@@ -61,7 +61,9 @@ public static class Program
 }
 ```
 
-<i class="fa fa-hand-o-right"></i> Modify the `Startup.cs` allowing App Metrics to inspect MVC routes by using the  `IMvcBuilder` extension method `AddMetrics()`. This adds an `Microsoft.AspNetCore.Mvc.Filters.IAsyncResourceFilter` implementation which is added to the `Microsoft.AspNetCore.Mvc.MvcOptions` `FilterCollection` which allows metrics tracked by App Metrics Middleware to be tagged by the route template of each endpoint.
+<i class="fa fa-hand-o-right"></i> Modify the `Startup.cs` allowing App Metrics to inspect MVC routes by using the  `IMvcBuilder` extension method `AddMetrics()`. 
+
+This adds an `Microsoft.AspNetCore.Mvc.Filters.IAsyncResourceFilter` implementation to the `Microsoft.AspNetCore.Mvc.MvcOptions` `FilterCollection` allowing metrics tracked by App Metrics Middleware to be tagged with the route template of each endpoint.
 
 ```csharp
 public class Startup
@@ -83,12 +85,23 @@ The `AddMetrics()` extension method on `AddMvc()` is required to allow App Metri
 {{% /notice %}}
 
 {{% notice info %}}
-The route template used to tag metrics can be customised by implementing a custom `App.Metrics.AspNetCore.IRouteNameResolver' e.g.
+The route template used to tag metrics can be customised by using a custom `App.Metrics.AspNetCore.IRouteNameResolver'. The custom implementation can be applied as shown in the snippet below:
 
-```
+```csharp
 services.AddMvc(options => options.Filters.Add(new MetricsResourceFilter(new MyCustomMetricsRouteNameResolver())));
 ```
+
 {{% /notice %}}
+
+{{% notice tip %}}
+To tag your own metrics with the route template provided by App Metrics, the route template can be accessed via an extension method on the HttpContext. See the snippet below as an example:
+{{% /notice %}}
+
+```csharp
+var routeTemplate = httpContext.GetMetricsCurrentRouteName();
+var tags = new MetricTags("route", routeTemplate);
+_metrics.Measure.Meter.Mark(errorRateOptions, tags);
+```
 
 ### Testing it out
 
