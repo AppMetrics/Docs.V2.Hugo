@@ -28,7 +28,7 @@ A histogram with an forward decaying reservoir produces [quantiles](https://en.w
 
 This sampling reservoir can be used when you are interested in recent changes to the distribution of data rather than a median on the lifetime of the histgram.
 
-The default sample size of 1028 and alpha value of 0.015, offers a 99.9% confidence level with a 5% margin of error assuming a normal distribution and heavily biases the reservoir to the past 5 mins of measurements. The higher the alpha, the more biased the reservoir will be towards newer values.
+The default sample size of 1028 and alpha value of 0.015, offers a 99.9% confidence level with a 5% margin of error assuming a normal distribution and heavily biases the reservoir to the past 5 mins of measurements. The higher the alpha, the more biased the reservoir will be towards newer values.  The behavior of the reservoir can further be adjusted with the minimum sample weight parameter. If set to non-zero value, older samples with low weights will be removed from the reservoir when the reservoir is preiodically rescaled. This improves reported statistics when periods of very low or no activity alternate with periods of high activity.
 
 App Metrics uses a [forward-decaying](http://dimacs.rutgers.edu/~graham/pubs/papers/fwddecay.pdf) reservoir with an exponential weighting towards recent samples.
 
