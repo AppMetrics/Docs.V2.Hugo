@@ -23,7 +23,7 @@ var process = Process.GetCurrentProcess();
 _metrics.Measure.Gauge.SetValue(MetricsRegistry.Gauges.TestGauge, process.WorkingSet64);
 ```
 
-Which for example when using the [JSON formatter](../intro.md#configuring-a-web-host) would result in something similar to: **TODO Link to json formatter**
+Which for example when using the [JSON formatter](../intro.md#configuring-a-web-host) would result in something similar to:
 
 ```csharp
 {
