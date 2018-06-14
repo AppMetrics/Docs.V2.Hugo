@@ -15,6 +15,7 @@ nuget install App.Metrics.Health
 nuget install App.Metrics.Health.Checks.Http
 nuget install App.Metrics.Health.Checks.Network
 nuget install App.Metrics.Health.Checks.Process
+nuget install App.Metrics.Health.Checks.Sql
 ```
 
 ```csharp
@@ -27,6 +28,10 @@ var healthBuilder = new HealthBuilder()
     .HealthChecks.AddProcessPhysicalMemoryCheck("Working Set", threshold)
     // Check connectivity to google with a "ping", passes if the result is `IPStatus.Success`
     .HealthChecks.AddPingCheck("google ping", "google.com", TimeSpan.FromSeconds(10))
+    // Check SQL connectivity, taking a Func<IDbConnection>, with a 10sec timeout and 1 minute caching of the result
+    .HealthChecks.AddSqlCachedCheck("DB Connection Cached", () => new SqliteConnection(ConnectionString),
+                                          TimeSpan.FromSeconds(10),
+                                          TimeSpan.FromMinutes(1),
     // Check connectivity to github by ensuring the GET request results in `IsSuccessStatusCode`
     .HealthChecks.AddHttpGetCheck("github", new Uri("https://github.com/"), TimeSpan.FromSeconds(10))
     // Check connectivity to github by ensuring the GET request results in `IsSuccessStatusCode`, this time performing 3 retries with a 100ms delay between failed requests
