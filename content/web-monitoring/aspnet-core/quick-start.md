@@ -77,7 +77,8 @@ public class Startup
 
 	public void ConfigureServices(IServiceCollection services)
 	{
-		services.AddMvc().AddMetrics();
+		services.AddMvc();
+            	services.AddMetrics();
 	}
 }
 ```
