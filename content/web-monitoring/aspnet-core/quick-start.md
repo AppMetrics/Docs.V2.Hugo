@@ -22,6 +22,8 @@ nuget install App.Metrics.AspNetCore.Mvc
 <i class="fa fa-hand-o-right"></i> Modify the `Program.cs` to apply the App Metrics ASP.NET Core defaults:
 
 ```csharp
+using App.Metrics.AspNetCore;
+
 public static class Program
 {
 	public static IWebHost BuildWebHost(string[] args)
