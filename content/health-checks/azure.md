@@ -3,7 +3,7 @@ title: "Azure Health Checks"
 draft: false
 chapter: false
 weight: 3
-icon: "/images/health.png"
+icon: "/images/azure.png"
 ---
 
 ## Azure Health Checks
