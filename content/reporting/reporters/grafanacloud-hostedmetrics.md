@@ -7,10 +7,6 @@ icon: "/images/grafana.png"
 
 ## GrafanaCloud Hosted Metrics
 
-{{% notice warning %}}
-The GrafanaCloud Hosted Metrics Reporter is not yet released to nuget. Dev builds can be found on [MyGet](https://www.myget.org/feed/appmetrics/package/nuget/App.Metrics.Reporting.GrafanaCloudHostedMetrics)
-{{% /notice %}}
-
 The [App.Metrics.Reporting.GrafanaCloudHostedMetrics](https://www.nuget.org/packages/App.Metrics.Reporting.GrafanaCloudHostedMetrics/) nuget package reports metrics to [GrafanaCloud Hosted Metrics](https://grafana.com/cloud/metrics) using the [App.Metrics.Formatters.GrafanaCloudHostedMetrics](https://www.nuget.org/packages/App.Metrics.Formatters.GrafanaCloudHostedMetrics/) nuget package to format metrics.
 
 ### Getting started
