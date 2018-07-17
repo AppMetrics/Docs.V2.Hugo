@@ -14,7 +14,7 @@ A metrics filter can be applied on the `IMetricsBuilder` which will be applied b
 
 ## Metrics Field Filter
 
-[Metric types]({{< ref "getting-started/metric-types/_index.md" >}}) supported my App Metrics typically record several values e.g. a Meter will record for example a 1-min, 5-min and 15-min rate. Such values can also be calculated using the chosen TSDB where metrics are flushed. In cases where metrics are frequently flushed and it is necessary to save on storage, metrics which aren't be used can be excluded:
+[Metric types]({{< ref "getting-started/metric-types/_index.md" >}}) supported by App Metrics typically record several fields e.g. a Meter will record for example a 1-min, 5-min and 15-min rate. Such values can also be calculated using the chosen TSDB where metrics are flushed. In cases where metrics are frequently flushed and it is necessary to save on storage, metrics which aren't be used can be excluded:
 
 ```csharp
 var metrics = new MetricsBuilder()
