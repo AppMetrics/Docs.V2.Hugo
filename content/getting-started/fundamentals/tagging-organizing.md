@@ -8,7 +8,7 @@ icon: "/images/tag.png"
 App Metrics provides a two ways to organize your metrics:
 
 1. Through the use of **Tags** when [defining your metrics]({{< ref "getting-started/fundamentals/recording-metrics.md#defining-metrics" >}}) or by [configuring global tags]({{< ref "getting-started/fundamentals/configuration.md" >}}) which apply for all Metrics.
-1. By specifing a **Context** label when [defining your metrics]({{< ref "getting-started/fundamentals/recording-metrics.md#defining-metrics" >}}). By default all custom metrics will belong the the "Application" context.
+1. By specifing a **Context** label when [defining your metrics]({{< ref "getting-started/fundamentals/recording-metrics.md#defining-metrics" >}}). By default all custom metrics will belong to the "Application" context.
 
 ## Metric Tagging
 
