@@ -1,5 +1,5 @@
 ---
-title: "Reporters"
+title: "Metrics Reporters"
 draft: false
 icon: "/images/reporting.png"
 ---
