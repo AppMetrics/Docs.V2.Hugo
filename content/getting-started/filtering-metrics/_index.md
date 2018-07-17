@@ -12,6 +12,35 @@ App Metrics supports filtering metrics on various properties such as Metric Type
 
 A metrics filter can be applied on the `IMetricsBuilder` which will be applied by default when retrieving metric snapshots.
 
+## Metrics Field Filter
+
+[Metric types]({{< ref "getting-started/metric-types/_index" >}}) supported my App Metrics typically record several values e.g. a Meter will record for example a 1-min, 5-min and 15-min rate. Such values can also be calculated using the chosen TSDB where metrics are flushed. In cases where metrics are frequently flushed and it is necessary to save on storage, metrics which aren't be used can be excluded:
+
+```csharp
+var metrics = new MetricsBuilder()
+    .MetricFields.Configure(
+        fields =>
+        {
+            fields.Counter.Exclude(CounterFields.Total, CounterFields.SetItem, CounterFields.SetItemPercent);
+            fields.Meter.OnlyInclude(MeterFields.Rate1M);
+            fields.Histogram.OnlyInclude(HistogramFields.P95, HistogramFields.P99);
+        })
+    .Build();
+```
+
+The `MetricsFields` extension also allows renaming the default metric names, for example to customise the default gauge and counter `value` fields:
+
+```csharp
+var metrics = new MetricsBuilder()
+    .MetricFields.Configure(
+        fields =>
+        {
+            fields.Counter.Set(CounterFields.Value, "custom_val");
+            fields.Gauge.Set(GaugeFields.Value, "custom_val");
+        })
+    .Build();
+```
+
 <i class="fa fa-hand-o-right"></i> The following is an example of how to apply a global filter:
 
 ```csharp
