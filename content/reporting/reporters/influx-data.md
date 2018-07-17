@@ -56,7 +56,7 @@ var metrics = new MetricsBuilder()
             options.HttpPolicy.BackoffPeriod = TimeSpan.FromSeconds(30);
             options.HttpPolicy.FailuresBeforeBackoff = 5;
             options.HttpPolicy.Timeout = TimeSpan.FromSeconds(10);
-            options.MetricsOutputFormatter = new MetricsJsonOutputFormatter();
+            options.MetricsOutputFormatter = new MetricsInfluxDbLineProtocolOutputFormatter();
             options.Filter = filter;
             options.FlushInterval = TimeSpan.FromSeconds(20);
         })
