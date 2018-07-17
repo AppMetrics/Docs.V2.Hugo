@@ -15,6 +15,12 @@ The [App.Metrics.Reporting.Elasticsearch](https://www.nuget.org/packages/App.Met
 nuget install App.Metrics.Reporting.Elasticsearch
 ```
 
+<i class="fa fa-hand-o-right"></i> Add the using `App.Metrics` for access the `ToElasticsearch(...)` extension method
+
+```csharp
+using App.Metrics;
+```
+
 <i class="fa fa-hand-o-right"></i> Then enable the reporter using `Report.ToElasticsearch(...)`:
 
 ```csharp

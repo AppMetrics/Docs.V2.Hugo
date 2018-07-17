@@ -15,6 +15,12 @@ The [App.Metrics.Reporting.Console](https://www.nuget.org/packages/App.Metrics.R
 nuget install App.Metrics.Reporting.Console
 ```
 
+<i class="fa fa-hand-o-right"></i> Add the using  `App.Metrics` for access the `ToConsole()` extension method:
+
+```csharp
+using App.Metrics;
+```
+
 <i class="fa fa-hand-o-right"></i> Then enable the reporter using `Report.ToConsole()`:
 
 ```csharp
