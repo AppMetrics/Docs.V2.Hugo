@@ -1,7 +1,7 @@
 ---
 title: "Community Talks"
 draft: false
-icon: "/images/code.png"
+icon: "/images/talks.png"
 weight: 100
 ---
 
