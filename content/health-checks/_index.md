@@ -99,7 +99,7 @@ See [ASP.NET Core Health]({{< ref "web-monitoring/aspnet-core/health.md#example-
 
 ## Configuring a Console Application
 
-<i class="fa fa-hand-o-right"></i> First reate a new dotnet core console application.
+<i class="fa fa-hand-o-right"></i> First create a new dotnet core console application.
 
 <i class="fa fa-hand-o-right"></i> Then install the [App.Metrics.Health](https://www.nuget.org/packages/App.Metrics.Health/) nuget package:
 
