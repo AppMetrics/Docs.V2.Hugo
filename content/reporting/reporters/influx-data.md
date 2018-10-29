@@ -28,7 +28,7 @@ var metrics = new MetricsBuilder()
 <i class="fa fa-hand-o-right"></i> App Metrics at the moment leaves report scheduling up the the user unless using [App.Metrics.AspNetCore.Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}). To run all configured reports use the `ReportRunner` on `IMetricsRoot`:
 
 ```csharp
-await metrics.ReportRunner.RunAllAsync();
+await Task.WhenAll(metrics.ReportRunner.RunAllAsync());
 ```
 
 {{% notice info %}}
