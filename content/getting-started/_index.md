@@ -116,7 +116,7 @@ var metrics = new MetricsBuilder()
     .Build();
 ```
 
-The above will configure the console reporter but App Metrics will not schedule the reporting by default. The is to allow flexiblity in scheduling for different types of applications. App Metrics does however provide a task schedular which can be used to schedule the reporting of metrics via all configured reporters.
+The above will configure the console reporter but App Metrics will not schedule the reporting by default. This is to allow flexiblity in scheduling for different types of applications. App Metrics does however provide a task schedular which can be used to schedule the reporting of metrics via all configured reporters.
 
 ```csharp
 var scheduler = new AppMetricsTaskScheduler(
@@ -129,7 +129,7 @@ scheduler.Start();
 ```
 
 {{% notice tip %}}
-If integrating App Metrics in an [ASP.NET Core application]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}), install the [App.Metrics.AspNetCore.Reporting](https://www.nuget.org/packages/App.Metrics.AspNetCore.Reporting/) nuget package which schdules reporting via an `Microsoft.Extensions.Hosting.IHostedService` implementation.
+If integrating App Metrics in an [ASP.NET Core application]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}), install the [App.Metrics.AspNetCore.Reporting](https://www.nuget.org/packages/App.Metrics.AspNetCore.Reporting/) nuget package which schedules reporting via an `Microsoft.Extensions.Hosting.IHostedService` implementation.
 {{% /notice %}}
 
 ## Configuring a Console Application
