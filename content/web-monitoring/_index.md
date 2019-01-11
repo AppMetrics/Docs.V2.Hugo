@@ -15,7 +15,7 @@ App Metrics makes it easy to get up and running with an open source monitoring s
 
 There are several [TSDB reporting extensions]({{< ref "reporting/reporters/_index.md" >}}) which App Metrics provides. If you can't find what you're looking for, [open a new github issue](https://github.com/AppMetrics/AppMetrics/issues/new) to discuss adding support.
 
-Out-of-box App Metrics does not provide a visualization tool, instead it includes [Grafana Dashboards](visualization-grafana.md) for web application monitoring, Grafana does such an amazing job at this already and supports the most [popular TSBDs](http://docs.grafana.org/features/datasources/influxdb/) available today.
+Out-of-box App Metrics does not provide a visualization tool, instead it includes [Grafana Dashboards](aspnet-core/grafana.md) for web application monitoring, Grafana does such an amazing job at this already and supports the most [popular TSBDs](http://docs.grafana.org/features/datasources/influxdb/) available today.
 
 The following documentation sections assist in getting started with App Metrics in a web application:
 
