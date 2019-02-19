@@ -51,7 +51,7 @@ var metrics = new MetricsBuilder()
             options.InfluxDb.Consistenency = "consistency";
             options.InfluxDb.UserName = "admin";
             options.InfluxDb.Password = "password";
-            options.InfluxDb.RetensionPolicy = "rp";
+            options.InfluxDb.RetentionPolicy = "rp";
             options.InfluxDb.CreateDataBaseIfNotExists = true;
             options.HttpPolicy.BackoffPeriod = TimeSpan.FromSeconds(30);
             options.HttpPolicy.FailuresBeforeBackoff = 5;
@@ -75,7 +75,7 @@ var metrics = new MetricsBuilder()
 |InfluxDb.UserName|The username when using basic auth to auth with InfluxDB.
 |InfluxDb.Password|The password when using basic auth to auth with InfluxDB.
 |InfluxDb.Consistenency|The InfluxDB database consistency level to use.
-|InfluxDb.RetensionPolicy|The InfluxDB databases rentension policy to write metrics to.
+|InfluxDb.RetentionPolicy|The InfluxDB databases rentention policy to write metrics to.
 |InfluxDb.CreateDataBaseIfNotExists|Will attempt to create the specified influxdb database if it does not exist.
 |HttpPolicy.BackoffPeriod|The `TimeSpan` to back-off when metrics are failing to report to the metrics ingress endpoint.
 |HttpPolicy.FailuresBeforeBackoff|The number of failures before backing-off when metrics are failing to report to the metrics ingress endpoint.
