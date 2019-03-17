@@ -225,12 +225,12 @@ jQuery(document).ready(function() {
 
     jQuery(document).keydown(function(e) {
       // prev links - left arrow key
-      if(e.which == '37') {
+      if(e.which == '37' && !e.shiftKey && !e.ctrlKey) {
         jQuery('.nav.nav-prev').click();
       }
 
       // next links - right arrow key
-      if(e.which == '39') {
+      if(e.which == '39'  && !e.shiftKey && !e.ctrlKey) {
         jQuery('.nav.nav-next').click();
       }
     });
