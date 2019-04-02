@@ -241,6 +241,63 @@ public class ConfigureHealthHostingOptions : IConfigureOptions<HealthEndpointsHo
 When a custom port is defined on any or all of the endpoints, App Metrics Health will append the additional urls with the defined ports to the [Microsoft.AspNetCore.Hosting.WebHostDefaults.ServerUrlsKey](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.hosting.webhostdefaults.serverurlskey?view=aspnetcore-2.0)'s value.
 {{% /notice %}}  
 
+## Securing Health Endpoints
+
+Using ASP.NET Core's IStartupFilter is great way to restrice access to metrics and health endpoints beause startup filters are evaluated before any middleware logic runs.
+
+### How to use
+
+Create an `Microsoft.AspNetCore.Hosting.Abstractions.IStartupFilter` implementation.
+
+ ```csharp
+  public class HealthCheckAuthorizationStartupFilter : IStartupFilter
+  {
+    public Action<IApplicationBuilder> Configure(Action<IApplicationBuilder> next)
+    {
+      return RequireSecretToHealth;
+
+      void RequireSecretToHealth(IApplicationBuilder app)
+      {
+        app.Use(async (context, next2) =>
+        {
+
+          if (string.Compare(context.Request.Path.Value, "/health",
+              StringComparison.InvariantCultureIgnoreCase) == 0)
+          {
+            var authHeader = "AUTHORIZATION_KEY";
+            var authSecret = "AUTHORIZATION_SECRET";
+            context.Request.Headers.TryGetValue(authHeader, 
+                    out var requestAuthSecret);
+            if (requestAuthSecret != authSecret)
+            {
+              context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+              await context.Response.WriteAsync("Invalid authorization.");
+              return;
+            }
+          }
+
+          await next2.Invoke();
+        });
+
+        next(app);
+      }
+    }
+  }
+```
+
+Register the implementation with Dependency Injection in `Startup.cs`:
+
+ ```csharp
+  public void ConfigureServices(IServiceCollection services)
+  {
+      ... 
+      
+      services.AddTransient<IStartupFilter, HealthCheckAuthorizationStartupFilter>();
+      
+      ...  
+  }  
+```
+
 ## Adding in-line and pre-defined checks
 
 As well as automatically registering any `HealthCheck` implementation, in-line and [pre-defined]({{< ref "health-checks/pre-defined-checks.md" >}}) checks can be added when building an `IWebHost` as show in the prevous code sample:
