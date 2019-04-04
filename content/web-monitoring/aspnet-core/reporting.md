@@ -83,7 +83,7 @@ public class Startup
                                     .Build();
 
         services.AddMetrics(metrics);
-        services.AddMetricsReportScheduler();
+        services.AddMetricsReportingHostedService();
 
         services.AddMvc().AddMetrics();
     }
