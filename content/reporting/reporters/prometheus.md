@@ -86,6 +86,11 @@ public static class Program
 
 With the above configuration, `/metrics-text` will return metrics in Prometheus plain text format and `/metrics` in Prometheus protobuf format.
 
+{{% notice warning %}}
+Prometheus > 2.0 does not support Protobuf format so use plain text format for `/metrics` endpoint.
+See the [Prometheus EXPOSITION FORMATS]({{< ref "https://prometheus.io/docs/instrumenting/exposition_formats" >}})
+{{% /notice %}}
+
 {{% notice info %}}
 See the [ASP.NET Core documentation]({{< ref "web-monitoring/aspnet-core/_index.md" >}}) for more details on integrating App Metrics in an ASP.NET Core application.
 {{% /notice %}}
