@@ -215,7 +215,7 @@ var webHostBuilder = WebHost.CreateDefaultBuilder(args)
     .ConfigureAppHealthHostingConfiguration(options =>
     {
         options.AllEndpointsPort = 1111;
-        options.HealthEndpoint = "app-metrics-health";
+        options.HealthEndpoint = "/app-metrics-health";
     });
     
 ...
