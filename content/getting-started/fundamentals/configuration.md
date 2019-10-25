@@ -16,7 +16,7 @@ App Metrics provides access to configuration options via the [MetricsBuilder]({{
 
 ### Configure in code
 
-<i class="fa fa-hand-o-right"></i> App Metrics options can be configured using a setup action which provdes access to the `MetricsOptions`:
+<i class="fa fa-hand-o-right"></i> App Metrics options can be configured using a setup action which provides access to the `MetricsOptions`:
 
 ```csharp
 var metrics = new MetricsBuilder()
