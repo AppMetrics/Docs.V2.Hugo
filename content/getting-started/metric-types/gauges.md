@@ -20,7 +20,7 @@ var processPhysicalMemoryGauge = new GaugeOptions
 
 var process = Process.GetCurrentProcess();
 
-_metrics.Measure.Gauge.SetValue(MetricsRegistry.Gauges.TestGauge, process.WorkingSet64);
+_metrics.Measure.Gauge.SetValue(processPhysicalMemoryGauge, process.WorkingSet64);
 ```
 
 Which for example when using the [JSON formatter](../intro.md#configuring-a-web-host) would result in something similar to:
