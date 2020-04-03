@@ -7,7 +7,7 @@ icon: "/images/datadog.png"
 
 ## Datadog
 
-The [App.Metrics.Reporting.Datadog](https://www.nuget.org/packages/App.Metrics.Reporting.Datadog/) nuget package reports metrics to [Datadog](https://www.datadoghq.com/) using the [App.Metrics.Formatters.Datadog](https://www.nuget.org/packages/App.Metrics.Formatters.Datadog/) nuget package to format metrics.
+The [App.Metrics.Reporting.Datadog](https://www.nuget.org/packages/App.Metrics.Reporting.Datadog/) nuget package reports metrics to [Datadog](https://www.datadoghq.com/) using the [App.Metrics.Formatting.Datadog](https://www.nuget.org/packages/App.Metrics.Formatting.Datadog/) nuget package to format metrics.
 
 ### Datadog URL, API Key
 
