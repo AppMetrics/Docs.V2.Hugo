@@ -8,6 +8,10 @@ icon: "/images/health.png"
 
 ## Predefined Health Checks
 
+{{% notice warning %}}
+Health Checks have now been retired given Microsoft have an equivalent implementation.
+{{% /notice %}}
+
 App Metrics includes various pre-defined health checks which can be registered using the `HealthBuilder`.
 
 ```console
