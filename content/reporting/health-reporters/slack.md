@@ -5,6 +5,10 @@ weight: 6
 icon: "/images/slack.png"
 ---
 
+{{% notice warning %}}
+Health Checks have now been retired given Microsoft have an equivalent implementation.
+{{% /notice %}}
+
 The [App.Metrics.Health.Reporting.Slack](https://www.nuget.org/packages/App.Metrics.Health.Reporting.Slack/) nuget package alerts failing health checks to slack.
 
 {{% notice info %}}
