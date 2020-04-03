@@ -8,6 +8,10 @@ icon: "/images/azure.png"
 
 ## Azure Health Checks
 
+{{% notice warning %}}
+Health Checks have now been retired given Microsoft have an equivalent implementation.
+{{% /notice %}}
+
 App Metrics includes pre-defined health checks for Azure resources which can be registered using the `HealthBuilder`.
 
 ```console

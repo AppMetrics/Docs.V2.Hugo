@@ -7,6 +7,10 @@ pre: "<b>2. </b>"
 icon: "/images/health.png"
 ---
 
+{{% notice warning %}}
+Health Checks have now been retired given Microsoft have an equivalent implementation.
+{{% /notice %}}
+
 Health Checks give you the ability to monitor the health of your application by writing a small tests which returns either a **healthy**, **degraded** or **unhealthy** result. This is useful not only to test the internal health of your application but also it's external dependencies such as an third party api which your application relies on to function correctly.
 
 ## Basics

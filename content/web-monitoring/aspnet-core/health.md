@@ -8,6 +8,10 @@ icon: "/images/health.png"
 
 ## Overview
 
+{{% notice warning %}}
+Health Checks have now been retired given Microsoft have an equivalent implementation.
+{{% /notice %}}
+
 App Metrics provides a set of support packages to integrate [App Metrics Health]({{< ref "health-checks/_index.md" >}}) functionality in an ASP.NET Core application. The core packages are as follows:
 
 |Package|Description|
