@@ -1,8 +1,10 @@
 ---
 title: "Community Talks & Demos"
 draft: false
+chapter: false
+pre: "<b>7. </b>"
+weight: 7
 icon: "/images/talks.png"
-weight: 100
 ---
 
 ## Talks
@@ -17,4 +19,6 @@ weight: 100
 
 ## Demos
 
-<i class="fa fa-hand-o-right"></i> [InfluxDB](https://www.youtube.com/watch?v=i4u9SzfSkic)
+<i class="fa fa-hand-o-right"></i> [How to collect metrics and create dashboards using Grafana, Prometheus and AppMetrics in .NET Core by Nick Chapsas](https://www.youtube.com/watch?v=sM7D8biBf4k)
+
+<i class="fa fa-hand-o-right"></i> [InfluxDB by Vo Thanh Phu](https://www.youtube.com/watch?v=i4u9SzfSkic)
