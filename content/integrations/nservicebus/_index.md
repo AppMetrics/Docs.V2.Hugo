@@ -28,4 +28,4 @@ With the NService Feature enabled any of the App Metrics reporters can be used t
 
 You can find an InfluxDB Grafana Dashaboard [here](https://grafana.com/grafana/dashboards/12471).
 
-![NServiceBus Grafana](images\nservicebus_grafana.png)
+![NServiceBus Grafana](./images/nservicebus_grafana.png)
