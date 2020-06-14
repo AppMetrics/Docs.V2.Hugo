@@ -24,7 +24,7 @@ To enable App Metrics to start capturing and recording NServiceBus metrics, simp
 
 ## Reporting
 
-With the NService Feature enabled any of the App Metrics reporters can be used to visualize NServiceBus emitted metrics.
+With the NServiceBus Feature enabled any of the App Metrics reporters can be used to visualize NServiceBus emitted metrics.
 
 You can find an InfluxDB Grafana Dashaboard [here](https://grafana.com/grafana/dashboards/12471).
 
