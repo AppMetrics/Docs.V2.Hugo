@@ -13,6 +13,8 @@ weight: 100
 
 <i class="fa fa-hand-o-right"></i> [Brave new .NET by Mark Rendle](https://channel9.msdn.com/Events/NDC/NDC-Oslo-2017/BRK09)
 
+<i class="fa fa-hand-o-right"></i> [Distributed .NET Core (DShop) - Episode 10 Metrics with AppMetrics, InfluxDB, Prometheus, Grafana by Dev Mentors](https://www.youtube.com/watch?v=2OiE-h9sNM4)
+
 # Demos
 
 <i class="fa fa-hand-o-right"></i> [InfluxDB](https://www.youtube.com/watch?v=i4u9SzfSkic)
