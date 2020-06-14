@@ -5,7 +5,7 @@ icon: "/images/talks.png"
 weight: 100
 ---
 
-# Talks
+## Talks
 
 <i class="fa fa-hand-o-right"></i> [Measure All The Things with App Metrics - Mark Rendle](https://www.youtube.com/watch?v=YJgBAiPlG3k)
 
@@ -15,6 +15,6 @@ weight: 100
 
 <i class="fa fa-hand-o-right"></i> [Distributed .NET Core (DShop) - Episode 10 Metrics with AppMetrics, InfluxDB, Prometheus, Grafana by Dev Mentors](https://www.youtube.com/watch?v=2OiE-h9sNM4)
 
-# Demos
+## Demos
 
 <i class="fa fa-hand-o-right"></i> [InfluxDB](https://www.youtube.com/watch?v=i4u9SzfSkic)
