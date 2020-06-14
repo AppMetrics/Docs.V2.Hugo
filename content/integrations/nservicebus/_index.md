@@ -2,7 +2,7 @@
 title: "NServiceBus"
 draft: false
 weight: 1
-icon: ""
+icon: "/images/nservicebus.png"
 ---
 
 ## Overview
