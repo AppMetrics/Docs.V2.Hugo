@@ -26,7 +26,7 @@ With App Metrics you can:
 
 ### What's the Performance Overhead?
 
-The performance overhead in terms of processing is minimal, see the [benchmark results](https://github.com/AppMetrics/AppMetrics/tree/master/benchmarks/App.Metrics.Benchmarks.Runner/BenchmarkDotNet.Artifacts/results) for the overhead on recording metrics.
+The performance overhead in terms of processing is minimal, see the [benchmark results](https://github.com/AppMetrics/AppMetrics/tree/dev/src/Core/benchmarks/App.Metrics.Benchmarks.Runner/BenchmarkDotNet.Artifacts/results) for the overhead on recording metrics.
 
 The memory overhead is also minimal, but will depend on the number of metrics your're tracking. However even with a very large number of metrics the memory overhead is still minimal. Histograms consume the most memory in terms of metric types as they keep a stream of data in memory to measure the statistical distribution of values, although App Metrics uses [Reservoir Sampling]({{< ref "getting-started/reservoir-sampling/_index.md" >}}) to work around this which allows us to maintain a small, manageable reservoir representing the entire data stream.
 
