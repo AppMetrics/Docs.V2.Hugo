@@ -129,7 +129,7 @@ scheduler.Start();
 ```
 
 {{% notice tip %}}
-If integrating App Metrics in an [ASP.NET Core application]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}), install the [App.Metrics.AspNetCore.Reporting](https://www.nuget.org/packages/App.Metrics.AspNetCore.Reporting/) nuget package which schedules reporting via an `Microsoft.Extensions.Hosting.IHostedService` implementation.
+If integrating App Metrics in an [ASP.NET Core application]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}), install the [App.Metrics.AspNetCore.All](https://www.nuget.org/packages/App.Metrics.AspNetCore.All/) nuget package which schedules reporting via an `Microsoft.Extensions.Hosting.IHostedService` implementation.
 {{% /notice %}}
 
 ## Configuring a Console Application

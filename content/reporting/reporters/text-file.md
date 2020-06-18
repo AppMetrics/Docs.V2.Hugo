@@ -27,14 +27,16 @@ var metrics = new MetricsBuilder()
 If not output file name is specified, the default path is the application execution path and file name `metrics.txt`. The output path and file name can be specified as `ToTextFile(@"C:\metrics.txt")`
 {{% /notice %}}
 
-<i class="fa fa-hand-o-right"></i> App Metrics at the moment leaves report scheduling up the the user unless using [App.Metrics.AspNetCore.Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) . To run all configured reports use the `ReportRunner` on `IMetricsRoot`:
+{{% notice info %}}
+<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
+{{% /notice %}}
 
 ```csharp
 await metrics.ReportRunner.RunAllAsync();
 ```
 
 {{% notice info %}}
-Report Scheduling will be added when [Microsoft.Extensions.Hosting.Background](https://github.com/aspnet/Hosting/blob/dev/src/Microsoft.Extensions.Hosting.Abstractions/BackgroundService.cs) is released, otherwise there are various other scheduling solutions available for C#. For ASP.NET Core reporting see details on the [App.Metrics.AspNetCore.Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) support package.
+<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
 {{% /notice %}}
 
 ## Configuration
