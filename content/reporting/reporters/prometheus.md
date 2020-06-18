@@ -58,14 +58,14 @@ public static class Program
 {
     public static IMetricsRoot Metrics { get; set; }
 
-    public static IWebHost BuildWebHost(string[] args)
+    public static IHost BuildHost(string[] args)
     {
         Metrics = AppMetrics.CreateDefaultBuilder()
                 .OutputMetrics.AsPrometheusPlainText()
                 .OutputMetrics.AsPrometheusProtobuf()
                 .Build();
 
-        return WebHost.CreateDefaultBuilder(args)
+        return Host.CreateDefaultBuilder(args)
                         .ConfigureMetrics(Metrics)
                         .UseMetrics(
                             options =>
@@ -76,11 +76,14 @@ public static class Program
                                     endpointsOptions.MetricsEndpointOutputFormatter = Metrics.OutputMetricsFormatters.OfType<MetricsPrometheusProtobufOutputFormatter>().First();
                                 };
                             })
-                        .UseStartup<Startup>()
+                        .ConfigureWebHostDefaults(webBuilder =>
+                        {
+                            webBuilder.UseStartup<Startup>();
+                        });
                         .Build();
     }
 
-    public static void Main(string[] args) { BuildWebHost(args).Run(); }
+    public static void Main(string[] args) { BuildHost(args).Run(); }
 }
 ```
 
