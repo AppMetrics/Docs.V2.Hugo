@@ -1,5 +1,5 @@
 ---
-title: "Metrics"
+title: "Microsoft HealthChecks"
 draft: false
 weight: 6
 icon: "/images/health.png"
