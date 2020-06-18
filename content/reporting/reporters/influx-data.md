@@ -7,14 +7,14 @@ icon: "/images/influx_logo.png"
 
 ## InfluxDB
 
-The [App.Metrics.Reporting.InfluxDB](https://www.nuget.org/packages/App.Metrics.Reporting.InfluxDB/) nuget package reports metrics to [InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/) using the [App.Metrics.Formatters.InfluxDB](https://www.nuget.org/packages/App.Metrics.Formatters.InfluxDB/) nuget package to format metrics by default using the [Line Protocol](https://docs.influxdata.com/influxdb/v1.3/write_protocols/line_protocol_tutorial/).
+The [App.Metrics.InfluxDB](https://www.nuget.org/packages/App.Metrics.InfluxDB/) nuget package reports metrics to [InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/) using the [App.Metrics.Formatters.InfluxDB](https://www.nuget.org/packages/App.Metrics.Formatters.InfluxDB/) nuget package to format metrics by default using the [Line Protocol](https://docs.influxdata.com/influxdb/v1.3/write_protocols/line_protocol_tutorial/).
 
 ### Getting started
 
-<i class="fa fa-hand-o-right"></i> To use the InfluxDB reporter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Reporting.InfluxDB/):
+<i class="fa fa-hand-o-right"></i> To use the InfluxDB reporter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.InfluxDB/):
 
 ```console
-nuget install App.Metrics.Reporting.InfluxDB
+nuget install App.Metrics.InfluxDB
 ```
 
 <i class="fa fa-hand-o-right"></i> Then enable the reporter using `Report.ToInfluxDb(...)`:

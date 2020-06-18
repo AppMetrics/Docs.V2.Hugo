@@ -7,7 +7,7 @@ icon: "/images/grafana.png"
 
 ## GrafanaCloud Hosted Metrics
 
-The [App.Metrics.Reporting.GrafanaCloudHostedMetrics](https://www.nuget.org/packages/App.Metrics.Reporting.GrafanaCloudHostedMetrics/) nuget package reports metrics to [GrafanaCloud Hosted Metrics](https://grafana.com/cloud/metrics) using the [App.Metrics.Formatters.GrafanaCloudHostedMetrics](https://www.nuget.org/packages/App.Metrics.Formatters.GrafanaCloudHostedMetrics/) nuget package to format metrics.
+The [App.Metrics.GrafanaCloudHostedMetrics](https://www.nuget.org/packages/App.Metrics.GrafanaCloudHostedMetrics/) nuget package reports metrics to [GrafanaCloud Hosted Metrics](https://grafana.com/cloud/metrics) using the [App.Metrics.Formatters.GrafanaCloudHostedMetrics](https://www.nuget.org/packages/App.Metrics.Formatters.GrafanaCloudHostedMetrics/) nuget package to format metrics.
 
 ### GrafanCloud URL, API Key and UserId
 
@@ -24,7 +24,7 @@ You can view the metrics being published within the grafana cloud instance at ht
 <i class="fa fa-hand-o-right"></i> To use the GrafanaCloud Hosted Metrics reporter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Reporting.GrafanaCloudHostedMetrics/):
 
 ```console
-nuget install App.Metrics.Reporting.GrafanaCloudHostedMetrics
+nuget install App.Metrics.GrafanaCloudHostedMetrics
 ```
 
 <i class="fa fa-hand-o-right"></i> Then enable the reporter using `Report.ToHostedMetrics(...)`:

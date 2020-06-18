@@ -7,12 +7,12 @@ icon: "/images/prometheus.png"
 
 ## Basics
 
-[Prometheus](https://prometheus.io/) promotes a *Pull* based approach rather than *Push*, therefore App Metrics does not include a reporter to push metrics, but rather supports formatting metric data in Prometheus formats using the [App.Metrics.Formatters.Prometheus](https://www.nuget.org/packages/App.Metrics.Formatters.Prometheus/) nuget package. `App.Metrics.Formatters.Prometheus` supports both Prometheus's plain text and protobuf formats.
+[Prometheus](https://prometheus.io/) promotes a *Pull* based approach rather than *Push*, therefore App Metrics does not include a reporter to push metrics, but rather supports formatting metric data in Prometheus formats using the [App.Metrics.Prometheus](https://www.nuget.org/packages/App.Metrics.Prometheus/) nuget package. `App.Metrics.Prometheus` supports both Prometheus's plain text and protobuf formats.
 
-<i class="fa fa-hand-o-right"></i> To use the Prometheus formatter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Formatters.Prometheus/):
+<i class="fa fa-hand-o-right"></i> To use the Prometheus formatter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Prometheus/):
 
 ```console
-nuget install App.Metrics.Formatters.Prometheus
+nuget install App.Metrics.Prometheus
 ```
 
 <i class="fa fa-hand-o-right"></i> Then enable Prometheus formatting using the `MetricsBuilder`:
@@ -45,10 +45,10 @@ See the [metrics formatting]({{< ref "getting-started/formatting-metrics/_index.
 
 To expose metrics for Prometheus to scrape in an ASP.NET Core application:
 
-<i class="fa fa-hand-o-right"></i> First install the [App.Metrics.AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore/) nuget package:
+<i class="fa fa-hand-o-right"></i> First install the [App.Metrics.AspNetCore.All](https://www.nuget.org/packages/App.Metrics.AspNetCore.All/) nuget package:
 
 ```console
-nuget install App.Metrics.AspNetCore
+nuget install App.Metrics.AspNetCore.All
 ```
 
 <i class="fa fa-hand-o-right"></i> Then configure the `WebHost`:

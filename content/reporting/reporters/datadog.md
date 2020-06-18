@@ -7,7 +7,7 @@ icon: "/images/datadog.png"
 
 ## Datadog
 
-The [App.Metrics.Reporting.Datadog](https://www.nuget.org/packages/App.Metrics.Reporting.Datadog/) nuget package reports metrics to [Datadog](https://www.datadoghq.com/) using the [App.Metrics.Formatting.Datadog](https://www.nuget.org/packages/App.Metrics.Formatting.Datadog/) nuget package to format metrics.
+The [App.Metrics.Datadog](https://www.nuget.org/packages/App.Metrics.Datadog/) nuget package reports metrics to [Datadog](https://www.datadoghq.com/) using the [App.Metrics.Formatting.Datadog](https://www.nuget.org/packages/App.Metrics.Formatting.Datadog/) and [App.Metrics.Reporting.Datadog](https://www.nuget.org/packages/App.Metrics.Reporting.Datadog/) nuget packages to format and report metrics.
 
 ### Datadog URL, API Key
 
@@ -22,7 +22,7 @@ The Datadog base URL to report metrics over http is https://api.datadoghq.com/
 <i class="fa fa-hand-o-right"></i> To use the Datadog HTTP reporter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Reporting.Datadog/):
 
 ```console
-nuget install App.Metrics.Reporting.Datadog
+nuget install App.Metrics.Datadog
 ```
 
 <i class="fa fa-hand-o-right"></i> Then enable the reporter using `Report.ToDatadogHttp(...)`:

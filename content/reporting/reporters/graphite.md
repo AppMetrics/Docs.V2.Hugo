@@ -7,14 +7,14 @@ icon: "/images/GraphiteLogo.png"
 
 ## Graphite
 
-The [App.Metrics.Reporting.Graphite](https://www.nuget.org/packages/App.Metrics.Reporting.Graphite/) nuget package reports metrics to [Graphite](https://graphiteapp.org) using the [App.Metrics.Formatters.Graphite](https://www.nuget.org/packages/App.Metrics.Formatters.Graphite/) nuget package to format metrics by default using the [PlainText Protocol](http://graphite.readthedocs.io/en/latest/feeding-carbon.html#the-plaintext-protocol).
+The [App.Metrics.Graphite](https://www.nuget.org/packages/App.Metrics.Graphite/) nuget package reports metrics to [Graphite](https://graphiteapp.org) using the [App.Metrics.Formatters.Graphite](https://www.nuget.org/packages/App.Metrics.Formatters.Graphite/) nuget package to format metrics by default using the [PlainText Protocol](http://graphite.readthedocs.io/en/latest/feeding-carbon.html#the-plaintext-protocol).
 
 ### Getting started
 
-<i class="fa fa-hand-o-right"></i> To use the Graphite reporter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Reporting.Graphite/):
+<i class="fa fa-hand-o-right"></i> To use the Graphite reporter, first install the [nuget package](https://www.nuget.org/packages/App.Metrics.Graphite/):
 
 ```console
-nuget install App.Metrics.Reporting.Graphite
+nuget install App.Metrics.Graphite
 ```
 
 <i class="fa fa-hand-o-right"></i> Then enable the reporter using `Report.ToGraphite(...)`:
