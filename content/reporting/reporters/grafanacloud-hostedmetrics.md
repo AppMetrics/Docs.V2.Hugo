@@ -36,7 +36,7 @@ var metrics = new MetricsBuilder()
 ```
 
 {{% notice info %}}
-<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
+<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric report scheduling.
 {{% /notice %}}
 
 ### Configuration
