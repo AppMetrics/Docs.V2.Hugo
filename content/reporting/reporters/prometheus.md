@@ -51,7 +51,7 @@ To expose metrics for Prometheus to scrape in an ASP.NET Core application:
 nuget install App.Metrics.AspNetCore.All
 ```
 
-<i class="fa fa-hand-o-right"></i> Then configure the `WebHost`:
+<i class="fa fa-hand-o-right"></i> Then configure the `Host`:
 
 ```csharp
 public static class Program

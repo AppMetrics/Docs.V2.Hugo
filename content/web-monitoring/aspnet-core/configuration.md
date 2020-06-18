@@ -11,7 +11,7 @@ Here you will find App Metrics configuration options related to integrating App 
 
 #### Program.cs
 
-When bootstrapping an ASP.NET Core application in `Program.cs` using the `Microsoft.AspNetCore.WebHost`, App Metrics core functionality can be configured using extension methods provided on [Microsoft.Extensions.Hosting.IWebHostBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.hosting.iwebhostbuilder?view=aspnetcore-2.0).
+When bootstrapping an ASP.NET Core application in `Program.cs` using the `Microsoft.Extensions.Hosting.Host`, App Metrics core functionality can be configured using extension methods provided on [Microsoft.Extensions.Hosting.IHostBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.ihostbuilder?view=dotnet-plat-ext-3.1).
 
 <i class="fa fa-hand-o-right"></i> Modifying or extending a `MetricsBuilder` that is pre-configured with the defaults configuration:
 
@@ -19,9 +19,9 @@ When bootstrapping an ASP.NET Core application in `Program.cs` using the `Micros
 ```csharp
 ...
 
-public static IWebHost BuidWebHost(string[] args)
+public static IHost BuidHost(string[] args)
 {
-    return WebHost.CreateDefaultBuilder(args)
+    return Host.CreateDefaultBuilder(args)
         .ConfigureMetricsWithDefaults(
             builder =>
                 {
@@ -33,7 +33,10 @@ public static IWebHost BuidWebHost(string[] args)
                         });
                 })
         .UseMetrics()
-        .UseStartup<Startup>()
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<Startup>();
+        });
         .Build();
 }
 
@@ -47,9 +50,9 @@ public static IWebHost BuidWebHost(string[] args)
 ```csharp
 ...
 
-public static IWebHost BuidWebHost(string[] args)
+public static IHost BuidHost(string[] args)
 {
-    return WebHost.CreateDefaultBuilder(args)
+    return Host.CreateDefaultBuilder(args)
         .ConfigureMetrics(
             builder =>
                 {
@@ -61,7 +64,10 @@ public static IWebHost BuidWebHost(string[] args)
                         });
                 })
         .UseMetrics()
-        .UseStartup<Startup>()
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<Startup>();
+        });
         .Build();
 }
 
@@ -71,7 +77,7 @@ public static IWebHost BuidWebHost(string[] args)
 
 #### Startup.cs
 
-Optionally, App Metrics core functionality can be configured in an ASP.NET Core application using the `Startup.cs` rather than bootstrapping on the `WebHost`. This is done by using the `MetricsBuilder` directly and the [Microsoft.Extensions.DependencyInjection.IServiceCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection?view=aspnetcore-2.0) extension methods provided by App Metrics.
+Optionally, App Metrics core functionality can be configured in an ASP.NET Core application using the `Startup.cs` rather than bootstrapping on the `Host`. This is done by using the `MetricsBuilder` directly and the [Microsoft.Extensions.DependencyInjection.IServiceCollection](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection?view=aspnetcore-2.0) extension methods provided by App Metrics.
 
 <i class="fa fa-hand-o-right"></i> Modifying or extending a `MetricsBuilder` that is pre-configured with the defaults configuration:
 

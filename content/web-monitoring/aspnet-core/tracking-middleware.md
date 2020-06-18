@@ -54,7 +54,7 @@ If your web application is secured with OAuth2, by default App.Metrics will reco
 
 `App.Metrics.AspNetCore.Tracking` supports a couple ways to enable metrics tracking in an ASP.NET Core application:
 
-1. Using the `Microsoft.AspNetCore.WebHost` in a `Program.cs`.
+1. Using the `Microsoft.Extensions.Hosting.Host` in a `Program.cs`.
 1. Using the `Microsoft.AspNetCore.Builder.IApplicationBuilder` in a `Startup.cs`.
 
 <i class="fa fa-hand-o-right"></i> First install the [nuget package](https://www.nuget.org/packages/App.Metrics.AspNetCore.Tracking/):
@@ -63,22 +63,25 @@ If your web application is secured with OAuth2, by default App.Metrics will reco
 nuget install App.Metrics.AspNetCore.Tracking
 ```
 
-<i class="fa fa-hand-o-right"></i> If bootstrapping with the `Microsoft.AspNetCore.WebHost`:
+<i class="fa fa-hand-o-right"></i> If bootstrapping with the `Microsoft.Extensions.Hosting.Host`:
 
 This is a simpler approach as it will wire up the tracking middleware on the `IApplicationBuilder`, as well as tracking and metrics infrastructure on the `IServiceCollection` for you.
 
 ```csharp
 public static class Program
 {
-    public static IWebHost BuildWebHost(string[] args)
+    public static IHost BuildHost(string[] args)
     {
-        return WebHost.CreateDefaultBuilder(args)
+        return Host.CreateDefaultBuilder(args)
                         .UseMetricsWebTracking()
-                        .UseStartup<Startup>()
+                        .ConfigureWebHostDefaults(webBuilder =>
+                        {
+                            webBuilder.UseStartup<Startup>();
+                        });
                         .Build();
     }
 
-    public static void Main(string[] args) { BuildWebHost(args).Run(); }
+    public static void Main(string[] args) { BuildHost(args).Run(); }
 }
 ```
 
@@ -148,7 +151,7 @@ public class Startup
 The configuration set with `Microsoft.Extensions.Configuration.IConfiguration` will override any code configuration.
 {{% /notice %}}
 
-#### Configure using [IConfiguration](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration?view=aspnetcore-2.0)
+#### Configure using [IConfiguration](https://docs.microsoft.com/en-us/dotnet/api/https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration?view=dotnet-plat-ext-3.1)
 
 <i class="fa fa-hand-o-right"></i> Web Tracking configuration is automatically applied from the `Microsoft.Extensions.Configuration.IConfiguration`. 
 

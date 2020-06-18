@@ -12,11 +12,14 @@ namespace ApiSample
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
+            var host = new HostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseStartup<Startup>()
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
                 .Build();
 
             host.Run();

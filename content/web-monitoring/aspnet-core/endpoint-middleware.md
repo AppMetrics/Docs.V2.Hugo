@@ -27,7 +27,7 @@ Both the `/metrics` and `/metrics-text` endpoints support content negotiation if
 
 `App.Metrics.AspNetCore.Endpoints` supports a couple ways to enable such endpoints in an ASP.NET Core application:
 
-1. Using the `Microsoft.AspNetCore.WebHost` in a `Program.cs`.
+1. Using the `Microsoft.Extensions.Hosting.Host` in a `Program.cs`.
 1. Using the `Microsoft.AspNetCore.Builder.IApplicationBuilder` in a `Startup.cs`.
 
 <i class="fa fa-hand-o-right"></i> First install the [nuget package](https://www.nuget.org/packages/App.Metrics.AspNetCore.Endpoints/):
@@ -43,15 +43,18 @@ This is a simpler approach as it will wire up the endpoint middleware on the `IA
 ```csharp
 public static class Program
 {
-    public static IWebHost BuildWebHost(string[] args)
+    public static IHost BuildHost(string[] args)
     {
-        return WebHost.CreateDefaultBuilder(args)
+        return Host.CreateDefaultBuilder(args)
                         .UseMetricsEndpoints()
-                        .UseStartup<Startup>()
+                        .ConfigureWebHostDefaults(webBuilder =>
+                        {
+                            webBuilder.UseStartup<Startup>();
+                        });
                         .Build();
     }
 
-    public static void Main(string[] args) { BuildWebHost(args).Run(); }
+    public static void Main(string[] args) { BuildHost(args).Run(); }
 }
 ```
 
@@ -115,7 +118,7 @@ public class Startup
 The configuration set with `Microsoft.Extensions.Configuration.IConfiguration` will override any code configuration.
 {{% /notice %}}
 
-#### Configure using [IConfiguration](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration?view=aspnetcore-2.0)
+#### Configure using [IConfiguration](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.iconfiguration?view=dotnet-plat-ext-3.1)
 
 <i class="fa fa-hand-o-right"></i> Endpoint configuration is automatically applied from the `Microsoft.Extensions.Configuration.IConfiguration`. 
 
@@ -147,7 +150,7 @@ As well as the endpoint configuration above, the `App.Metrics.AspNetCore.Endpoin
 |MetricsTextEndpoint|The path to use for the metrics text endpoint, the defaults is `/metrics-text`.
 |MetricsTextEndpointPort|The port to use for the metrics text endpoint, if not specified uses your application's default port.
 
-<i class="fa fa-hand-o-right"></i> To modify these configuration options, use the `ConfigureAppMetricsHostingConfiguration()` extension on the `IWebHostBuilder`:
+<i class="fa fa-hand-o-right"></i> To modify these configuration options, use the `ConfigureAppMetricsHostingConfiguration()` extension on the `IHostBuilder`:
 
 ```csharp
 ...

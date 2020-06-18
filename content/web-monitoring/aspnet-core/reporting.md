@@ -8,7 +8,7 @@ icon: "/images/reporting.png"
 
 The [App.Metrics.Extensions.Hosting](https://www.nuget.org/packages/App.Metrics.Extensions.Hosting/) nuget package provides functionality to schedule metrics reporting using one or more of the [metric reporters]({{< ref "reporting/reporters/_index.md" >}}) in an ASP.NET Core application.
 
-App Metrics uses a [Microsoft.Extensions.Hosting.IHostedService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.ihostedservice?view=aspnetcore-2.0) implementation for scheduling reporters which is automatically configured if reporting is enabled when using the `UseMetrics` [Microsoft.Extensions.Hosting.IHostBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.ihostbuilder?view=dotnet-plat-ext-3.1) extensions.
+App Metrics uses a [Microsoft.Extensions.Hosting.IHostedService](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.ihostedservice?view=dotnet-plat-ext-3.1) implementation for scheduling reporters which is automatically configured if reporting is enabled when using the `UseMetrics` [Microsoft.Extensions.Hosting.IHostBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.ihostbuilder?view=dotnet-plat-ext-3.1) extensions.
 
 ## How to use
 
