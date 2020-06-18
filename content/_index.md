@@ -12,8 +12,6 @@ App Metrics abstracts away the underlying repository of your Metrics for example
 
 App Metrics provides various metric types to measure things such as the rate of requests, counting the number of user logins over time, measure the time taken to execute a database query, measure the amount of free memory and so on. Metrics types supported are Apdex, Gauges, Counters, Meters, Histograms and Timers.
 
-App Metrics also provides a health checking system allowing you to monitor the health of your application through user defined checks.
-
 With App Metrics you can:
 
 + Capture application metrics within any type of .NET application e.g. Windows Service, MVC Site, Web API etc
