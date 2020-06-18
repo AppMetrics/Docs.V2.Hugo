@@ -29,14 +29,6 @@ var metrics = new MetricsBuilder()
 <i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
 {{% /notice %}}
 
-```csharp
-await Task.WhenAll(metrics.ReportRunner.RunAllAsync());
-```
-
-{{% notice info %}}
-<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
-{{% /notice %}}
-
 ### Configuration
 
 Configuration options are provided as a setup action used with `ToGraphite(...)`.

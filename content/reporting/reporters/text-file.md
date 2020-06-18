@@ -31,13 +31,6 @@ If not output file name is specified, the default path is the application execut
 <i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
 {{% /notice %}}
 
-```csharp
-await metrics.ReportRunner.RunAllAsync();
-```
-
-{{% notice info %}}
-<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
-{{% /notice %}}
 
 ## Configuration
 

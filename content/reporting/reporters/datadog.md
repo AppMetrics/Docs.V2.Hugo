@@ -33,12 +33,6 @@ var metrics = new MetricsBuilder()
     .Build();
 ```
 
-<i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) on host to configure metric reporting.
-
-```csharp
-await metrics.ReportRunner.RunAllAsync();
-```
-
 {{% notice info %}}
 <i class="fa fa-hand-o-right"></i> See [Reporting]({{< ref "web-monitoring/aspnet-core/reporting.md" >}}) for details on configuring metric reporting.
 {{% /notice %}}
