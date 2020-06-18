@@ -1,7 +1,7 @@
 ---
 title: "Microsoft HealthChecks"
 draft: false
-weight: 6
+weight: 5
 icon: "/images/health.png"
 ---
 

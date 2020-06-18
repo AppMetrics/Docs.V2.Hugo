@@ -1,7 +1,7 @@
 ---
 title: "Prometheus"
 draft: false
-weight: 2
+weight: 1
 icon: "/images/prometheus.png"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Graphite"
 draft: false
-weight: 4
+weight: 
 icon: "/images/GraphiteLogo.png"
 ---
 

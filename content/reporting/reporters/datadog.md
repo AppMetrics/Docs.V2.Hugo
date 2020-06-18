@@ -1,7 +1,7 @@
 ---
 title: "Datadog"
 draft: false
-weight: 1
+weight: 4
 icon: "/images/datadog.png"
 ---
 

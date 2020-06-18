@@ -1,7 +1,7 @@
 ---
 title: "Influx Data"
 draft: false
-weight: 1
+weight: 3
 icon: "/images/influx_logo.png"
 ---
 

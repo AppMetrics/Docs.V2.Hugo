@@ -1,7 +1,7 @@
 ---
 title: "GrafanaCloud Hosted Metrics"
 draft: false
-weight: 1
+weight: 2
 icon: "/images/grafana.png"
 ---
 

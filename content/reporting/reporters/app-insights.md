@@ -1,5 +1,5 @@
 ---
-title: "AppInsights"
+title: "Azure Application Insights"
 draft: false
 weight: 7
 icon: "/images/cmd.png"
