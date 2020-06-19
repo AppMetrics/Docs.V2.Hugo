@@ -17,7 +17,7 @@ Out-of-box, App.Metrics includes [Grafana dashboards](https://grafana.com/dashbo
 - Graphs are configured to use a `datasource` template variable so that you don't need to update all charts with the datasource you configured in Grafana.
 - Display a health overview showing passed, degraded and failed checks as well as an overall health status, color coded by the status value. (***Not yet available in App Metrics 2.0***)
 
-<img alt="grafana web demo" src="https://raw.githubusercontent.com/alhardy/AppMetrics.DocFx/master/images/generic_grafana_dashboard_demo.gif" />
+<img alt="grafana web demo" src="https://raw.githubusercontent.com/AppMetrics/Docs.V2.Hugo/main/static/images/generic_grafana_dashboard_demo.gif" />
 
 <i class="fa fa-hand-o-right"></i> Get the Grafana Dashboards
 
@@ -33,7 +33,7 @@ Out-of-box, App.Metrics includes [Grafana dashboards](https://grafana.com/dashbo
 - Supports filtering graphs by `client_id` so that we can visualize request rates for example on each API endpoint, useful for example to determine client rate limits or what versions clients are using.
 - Supports filtering graphs by `route`, allowing us to more clearly visualize a clients usage of a specific endpoint.
 
-<img alt="grafana web oauth2 demo" src="https://raw.githubusercontent.com/alhardy/AppMetrics.DocFx/master/images/generic_grafana_oauth2_dashboard_demo.gif" />
+<img alt="grafana web oauth2 demo" src="https://raw.githubusercontent.com/AppMetrics/Docs.V2.Hugo/main/static/images/generic_grafana_oauth2_dashboard_demo.giff" />
 
 <i class="fa fa-hand-o-right"></i> Get the Grafana Dashboards
 

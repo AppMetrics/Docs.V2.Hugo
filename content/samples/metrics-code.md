@@ -19,13 +19,13 @@ You can find code samples referenced below for App Metrics features on [GitHub](
 - `REPORTING`: Schedules metric reporting via console.
 
 {{% notice info %}}
-Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetCore2.Api.QuickStart)
+Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/main/AspNetCore2.Api.QuickStart)
 {{% /notice %}}
 
 <i class="fa fa-hand-o-right"></i> `AspNetCore2.Api.Reservoirs.csproj`: An ASP.NET Core 2.0 Api with App Metrics 2.0 [InfluxDB Reporting]({{< ref "reporting/reporters/influx-data.md" >}}) configured and demostrates the difference between supported [reservoir types]({{< ref "getting-started/reservoir-sampling/_index.md" >}}) through a sample [Grafana dashboard](https://grafana.com/dashboards/3408/edit). *Requires an `appmetricsreservoirs` InfluxDB database*.
 
 {{% notice info %}}
-Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetCore2.Api.Reservoirs)
+Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/main/AspNetCore2.Api.Reservoirs)
 {{% /notice %}}
 
 #### Net452.Metrics.Console.sln
@@ -33,7 +33,7 @@ Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/AspNetC
 <i class="fa fa-hand-o-right"></i> `Net452.Metrics.Console.QuickStart.csproj`: A NET452 console application with App Metrics 2.0 basics configured.
 
 {{% notice info %}}
-Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/master/Net452.Metrics.Console.QuickStart)
+Get the code [here](https://github.com/AppMetrics/Samples.V2/tree/main/Net452.Metrics.Console.QuickStart)
 {{% /notice %}}
 
 ___

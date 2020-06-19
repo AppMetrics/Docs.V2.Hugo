@@ -25,4 +25,4 @@ You can find App Metrics compatible Grafana dashboards on [Grafana Labs](https:/
 
 ### InfluxDB Demo Dashboard
 
-<img alt="grafana demo" src="https://raw.githubusercontent.com/alhardy/app-metrics-docs/master/images/grafana_console.gif" />
+<img alt="grafana demo" src="https://raw.githubusercontent.com/AppMetrics/Docs.V2.Hugo/main/static/images/grafana_console.gif" />
