@@ -6,6 +6,7 @@ draft: false
 ## System Usage
 
 App Metrics includes a hosted service which collects system usage metrics. Metrics include:
+
 - Total CPU Percentage Used
 - Privileged CPU Percentage Used
 - User CPU Percentage Used
@@ -42,6 +43,7 @@ public void ConfigureServices(IServiceCollection services)
 ## GC Events
 
 App Metrics includes a hosted service which collects GC metrics. Metrics include:
+
 - Gen 0 Collections
 - Gen 1 Collections
 - Gen 2 Collections
