@@ -8,7 +8,7 @@ icon: "/images/sampling.png"
 
 Histograms measure the statistical distribution of a set of values. In high performance applications it is not possible to keep the entire data stream of a histogram in memory. To work around this reservoir sampling algorithms allow us to maintain a small, manageable reservoir which is statistically representative of an entire data stream.
 
-[Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling) is a family of randomized algorithms for randomly choosing a sample of `k` items from a list `S` containing `n` items, where `n` is either a very large or unknown number. Typically `n` is large enough that it cannot be stored in memory. This type of sampling allows us to measure descriptive statisitcs including the *min*, *max*, *mean*, *median*, *standard deviation* and [quantiles](https://en.wikipedia.org/wiki/Quantile) i.e. the *75th percentile*, *90th percentile*, *95th percentile*, *99th percentile* and *99.9th percentile* on a stream of data.
+[Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling) is a family of randomized algorithms for randomly choosing a sample of `k` items from a list `S` containing `n` items, where `n` is either a very large or unknown number. Typically `n` is large enough that it cannot be stored in memory. This type of sampling allows us to measure descriptive statisitcs including the *min*, *max*, *mean*, *median*, *standard deviation* and [quantiles](https://en.wikipedia.org/wiki/Quantile) i.e. the *75th percentile*, *95th percentile*, *98th percentile*,  *99th percentile* and *99.9th percentile* on a stream of data.
 
 App Metrics supports four types of sampling such data streams:
 
