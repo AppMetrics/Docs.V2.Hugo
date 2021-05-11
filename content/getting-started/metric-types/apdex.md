@@ -18,7 +18,7 @@ Apdex provides three thresholds estimating end user satisfaction, **satisfied**,
 App Metrics caculates the counts of the three thresholds using a [Histogram]({{< relref "histograms.md" >}}) to sample data recorded. The value T seconds, histogram sample size and [reservoir sampling]({{< ref "getting-started/reservoir-sampling/_index.md" >}}) type can be configured when creating the `ApdexOptions`.
 
 {{% notice info %}}
-The Apdex score between 0 and 1 is calculated using the following: **( Satisfied requests + ( Tolerating requests / 2 ) ) ) / Total number of requests**
+The Apdex score between 0 and 1 is calculated using the following: **( Satisfied requests + ( Tolerating requests / 2 ) ) / Total number of requests**
 {{% /notice %}}
 
 ## Using Apdex
