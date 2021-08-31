@@ -12,7 +12,7 @@ Out-of-box, App.Metrics includes [Grafana dashboards](https://grafana.com/dashbo
 ### Web Monitoring
 
 - Metrics recorded by [App Metrics ASP.NET Core Tracking]({{< ref "web-monitoring/aspnet-core/tracking-middleware.md" >}}) are pre-configured in the Grafana dashboard.
-- Supports filtering graphs by environment allow the same dashbaord to be re-used across environments.
+- Supports filtering graphs by environment allow the same dashboard to be re-used across environments.
 - Supports filtering graphs by application. The idea is to tag metrics by your application's name allowing you to re-use the same dashboard instance for all web applications using App Metrics.
 - Graphs are configured to use a `datasource` template variable so that you don't need to update all charts with the datasource you configured in Grafana.
 - Display a health overview showing passed, degraded and failed checks as well as an overall health status, color coded by the status value. (***Not yet available in App Metrics 2.0***)
