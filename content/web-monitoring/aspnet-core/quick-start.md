@@ -80,7 +80,7 @@ public class Startup
 
 	public void ConfigureServices(IServiceCollection services)
 	{
-		services.AddMvcCore().AddMetricsCore();
+		services.AddMvcCore().AddMetrics();
 	}
 }
 ```
