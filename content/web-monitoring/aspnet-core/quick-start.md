@@ -26,18 +26,21 @@ using App.Metrics.AspNetCore;
 
 public static class Program
 {
-	public static IHost BuildHost(string[] args)
-	{
-		return Host.CreateDefaultBuilder(args)
-				.UseMetrics()
-				.ConfigureWebHostDefaults(webBuilder =>
-        {
-            webBuilder.UseStartup<Startup>();
-        });
-				.Build();
-	}
+    public static IHost BuildHost(string[] args)
+    {
+        return Host.CreateDefaultBuilder(args)
+            .UseMetrics()
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            })
+            .Build();
+    }
 
-	public static void Main(string[] args) { BuildHost(args).Run(); }
+    public static void Main(string[] args)
+    {
+        BuildHost(args).Run();
+    }
 }
 ```
 
