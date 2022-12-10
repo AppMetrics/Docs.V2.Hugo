@@ -116,7 +116,7 @@ var metrics = new MetricsBuilder()
     .Build();
 ```
 
-The above will configure the console reporter but App Metrics will not schedule the reporting by default. This is to allow flexiblity in scheduling for different types of applications. App Metrics does however provide a task schedular which can be used to schedule the reporting of metrics via all configured reporters.
+The above will configure the console reporter but App Metrics will not schedule the reporting by default. This is to allow flexiblity in scheduling for different types of applications. App Metrics does however provide a task scheduler which can be used to schedule the reporting of metrics via all configured reporters.
 
 ```csharp
 var scheduler = new AppMetricsTaskScheduler(
