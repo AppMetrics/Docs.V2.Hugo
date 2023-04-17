@@ -16,31 +16,31 @@ Each metric being measured is defined via one the available [metric types]({{< r
 ```csharp
 public static class MyMetricsRegistry
 {
-    public static GaugeOptions Errors => new GaugeOptions
+    public static GaugeOptions Errors { get; } = new GaugeOptions
     {
         Name = "Errors"
     };
 
-    public static CounterOptions SampleCounter => new CounterOptions
+    public static CounterOptions SampleCounter { get; } = new CounterOptions
     {
         Name = "Sample Counter",
         MeasurementUnit = Unit.Calls,
     };
 
-    public static HistogramOptions SampleHistogram => new HistogramOptions
+    public static HistogramOptions SampleHistogram { get; } = new HistogramOptions
     {
         Name = "Sample Histogram",
         Reservoir = () => new DefaultAlgorithmRReservoir(),
         MeasurementUnit = Unit.MegaBytes
     };
 
-    public static MeterOptions SampleMeter => new MeterOptions
+    public static MeterOptions SampleMeter { get; } = new MeterOptions
     {
         Name = "Sample Meter",
         MeasurementUnit = Unit.Calls
     };
 
-    public static TimerOptions SampleTimer => new TimerOptions
+    public static TimerOptions SampleTimer { get; } = new TimerOptions
     {
         Name = "Sample Timer",
         MeasurementUnit = Unit.Items,
@@ -49,7 +49,7 @@ public static class MyMetricsRegistry
         Reservoir = () => new DefaultForwardDecayingReservoir(sampleSize: 1028, alpha: 0.015)
     };
 
-    public static ApdexOptions SampleApdex => new ApdexOptions
+    public static ApdexOptions SampleApdex { get; } = new ApdexOptions
     {
         Name = "Sample Apdex"
     };
