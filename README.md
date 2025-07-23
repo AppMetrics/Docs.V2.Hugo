@@ -1,5 +1,5 @@
 # App Metrics 2.0 Documentaton
-This repo contains the source code for http://app-metrics.io/ which is the documentation for AppMetrics
+This repo contains the source code for AppMetrics which is the documentation for AppMetrics
 
 ## Building
 
